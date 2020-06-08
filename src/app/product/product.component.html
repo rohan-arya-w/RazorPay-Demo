@@ -1,8 +1,17 @@
-<div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+
+  <div class="row">
+    
+
+      <div class="card m-5 col-2 bg-dark text-white" style="width: 25rem;" *ngFor="let index of this.prod_det;let i =index" >
+          <img src="/assets/shopping-cart.png" class="card-img-top p-1" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{this.prod_det[i].prod_name}}</h5>
+            <p class="card-text">Product:{{this.prod_det[i].prod_material}}</p>
+            <p class="card-text">{{this.prod_det[i].prod_department}}</p>
+            <p class="card-text">Color : {{this.prod_det[i].prod_color}}</p>
+            <a href="#" class="btn btn-primary">{{this.prod_det[i].prod_price}}</a>
+          </div>
+        
+
     </div>
   </div>
